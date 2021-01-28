@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import time
 
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
@@ -137,7 +138,9 @@ def plot_states(x, y, theta, iter_id=0, animate=True):
             return ln,
 
         ani = FuncAnimation(fig, update, frames=x.shape[0], init_func=init, blit=True, interval=20)
-        plt.show()
+        #plt.show()
+        print(time.time())
+        plt.savefig("Figure" + time.time() + ".jpg")
 
 
 # Olson optimization utils
