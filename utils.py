@@ -114,7 +114,7 @@ def maha_dist(x, I):
 def Rot(theta):
     return np.array([[np.cos(theta), -np.sin(theta)],[np.sin(theta), np.cos(theta)]])
 
-def plot_states(x, y, theta, iter_id=0, animate=True):
+def plot_states(x, y, theta, iter_id=0, animate=False):
     if not animate:
         plt.cla()
         plt.plot(x, y)
