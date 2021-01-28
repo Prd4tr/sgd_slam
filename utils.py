@@ -140,7 +140,7 @@ def plot_states(x, y, theta, iter_id=0, animate=True):
         ani = FuncAnimation(fig, update, frames=x.shape[0], init_func=init, blit=True, interval=20)
         #plt.show()
         print(time.time())
-        plt.savefig("Figure" + time.time() + ".jpg")
+        plt.savefig("Figure" + str(time.time()) + ".jpg")
 
 
 # Olson optimization utils
