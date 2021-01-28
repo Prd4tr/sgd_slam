@@ -68,7 +68,7 @@ def sgd(states, meas, inf_m, n_iter=100, alpha=1e-10):
         # Ensure angles are within -pi and pi
         states = states.reshape(-1,3).T
         states[2,:] = mod2pi(states[2,:])
-        # plot_states(states[0,:], states[1,:], states[2,:])
+        plot_states(states[0,:], states[1,:], states[2,:])
         print(np.sum(alternateCalcCost(states, meas, inf_m)))
         states = states.T.flatten()
     

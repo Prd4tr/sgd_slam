@@ -23,7 +23,7 @@ def main():
 
     
     optim.SGDOptimizeGraph(pose_init, meas, covariance, inf_mat)
-    cost = utils.calculate_costs(X_init, meas, inf_mat)
+    #cost = utils.calculate_costs(X_init, meas, inf_mat)
 
     """
     optim.sgd(X_init.T.flatten(), meas, inf_mat)
