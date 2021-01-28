@@ -143,5 +143,6 @@ def SGDOptimizeGraph(p, meas, cov, inf_m, n_iter=200):
         print(np.sum(alternateCalcCost(p.T, meas, inf_m)))
         # cost.append(np.sum(alternateCalcCost(p.T, meas, inf_m)))
     plt.plot(cost)
-    plt.show()
+    #plt.show()
+    plt.savefig("Figure"+start_time+".jpg")
     
