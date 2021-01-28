@@ -137,11 +137,11 @@ def SGDOptimizeGraph(p, meas, cov, inf_m, n_iter=200):
             p[a+1:b+1] += d_pose_cumulative
             p[b+1:] += d_pose_cumulative[-1]
 
-        # if(iter%20 == 0):
-        #     print("20 Iterations ended. wow.")
-        # plot_states(p[:,0], p[:,1], p[:,2], iter)
-        # print(np.sum(alternateCalcCost(p.T, meas, inf_m)))
-        # cost.append(np.sum(alternateCalcCost(p.T, meas, inf_m)))
-    # plt.plot(cost)
-    # plt.show()
+        if(iter%20 == 0):
+            print("20 Iterations ended. wow.")
+        plot_states(p[:,0], p[:,1], p[:,2], iter)
+        print(np.sum(alternateCalcCost(p.T, meas, inf_m)))
+        cost.append(np.sum(alternateCalcCost(p.T, meas, inf_m)))
+    plt.plot(cost)
+    plt.show()
     
